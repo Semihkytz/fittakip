@@ -72,8 +72,11 @@
             <strong>Kısaca</strong>
             <ul>
                 <li>Hesap yok, kayıt yok. Girdiğin her şey yalnızca kendi telefonunda saklanır.</li>
-                <li>Verilerini toplamıyor, satmıyor, reklam için kullanmıyor ve kimseyle paylaşmıyoruz.</li>
-                <li>İnternete yalnızca barkod okuttuğunda, ürünün barkod numarası Open Food Facts'e gönderilir.</li>
+                <li>Profil, kilo, antrenman ve yemek kayıtlarını toplamıyor, satmıyor, reklam için kullanmıyor ve kimseyle
+                    paylaşmıyoruz.</li>
+                <li>Barkod okuttuğunda ürünün barkod numarası Open Food Facts'e gönderilir.</li>
+                <li>Barkod okuyucu (Google ML Kit), Google'a cihaz modeli ve hata kodları gibi kişisel olmayan teknik tanı
+                    verileri gönderir.</li>
             </ul>
         </div>
 
@@ -87,8 +90,7 @@
             <li>Hatırlatıcı ayarları</li>
         </ul>
         <p>Bu bilgilerin tamamı yalnızca cihazındaki uygulama depolama alanında tutulur. Geliştiricinin ya da başka birinin
-            sunucusuna gönderilmez. Uygulamada kullanıcı hesabı, giriş, analiz (analytics) aracı, reklam ya da izleme
-            yazılımı bulunmaz.</p>
+            sunucusuna gönderilmez. Uygulamada kullanıcı hesabı, giriş, reklam ya da izleme yazılımı bulunmaz.</p>
 
         <h2>2. İnternet bağlantısı ne zaman kullanılır?</h2>
         <p>Yalnızca "Barkod okut" özelliğini kullandığında, okutulan ürünün <strong>barkod numarası</strong> ürünün besin
@@ -96,6 +98,20 @@
                 Facts</a> veritabanına gönderilir. Bu istekle birlikte kişisel bilgi, profil ya da kayıtların gönderilmez.
             Open Food Facts'in bu isteği nasıl işlediği kendi <a href="https://world.openfoodfacts.org/privacy"
                 target="_blank" rel="noopener">gizlilik politikasına</a> tabidir.</p>
+        <p>Barkodu kameradan okumak için Google'ın <strong>ML Kit</strong> kütüphanesi kullanılır. Görüntü telefonunda
+            işlenir, hiçbir yere gönderilmez. ML Kit ise kendi işleyişini iyileştirmek için Google'a şu teknik tanı
+            verilerini gönderir:</p>
+        <ul>
+            <li>Cihaz bilgisi: marka, model, Android sürümü</li>
+            <li>Uygulama bilgisi: paket adı ve sürüm</li>
+            <li>Kuruluma özel rastgele bir kimlik (seni ya da telefonunu tanımlamak için değil)</li>
+            <li>Performans ölçümleri, ayarlar ve hata kodları</li>
+        </ul>
+        <p>Bu veriler HTTPS ile şifrelenerek gönderilir, Google tarafından yalnızca tanı ve kullanım istatistiği için
+            kullanılır ve üçüncü taraflarla paylaşılmaz. Bu verilere geliştirici olarak bizim erişimimiz yoktur. Ayrıntılar:
+            <a href="https://developers.google.com/ml-kit/android-data-disclosure" target="_blank" rel="noopener">ML Kit
+                veri açıklaması</a>, <a href="https://policies.google.com/privacy" target="_blank"
+                rel="noopener">Google Gizlilik Politikası</a>.</p>
         <p>Hareket ekranındaki "Videosunu YouTube'da ara" ya da bu sayfaya giden bağlantılar telefonundaki tarayıcıyı veya
             ilgili uygulamayı açar; bu durumda o hizmetlerin kendi politikaları geçerlidir.</p>
 
@@ -115,12 +131,11 @@
 
         <h2>5. Verilerini silme</h2>
         <p>Profil &gt; "Tüm veriyi sil" ile tüm kayıtlarını istediğin an silebilirsin. Uygulamayı kaldırmak da cihazdaki
-            tüm FitTakip verilerini siler. Verilerin bizde bulunmadığı için ayrıca bir silme talebi göndermene gerek yoktur.
+            tüm FitTakip verilerini siler. Kayıtların bizde bulunmadığı için ayrıca bir silme talebi göndermene gerek yoktur.
         </p>
 
         <h2>6. Çocuklar</h2>
-        <p>FitTakip 13 yaşından küçük çocuklara yönelik değildir ve bilerek çocuklardan veri toplamaz (zaten hiçbir kullanıcıdan
-            veri toplamaz).</p>
+        <p>FitTakip 13 yaşından küçük çocuklara yönelik değildir ve bilerek çocuklardan kişisel veri toplamaz.</p>
 
         <h2>7. Sağlık uyarısı</h2>
         <p>FitTakip genel bilgilendirme ve kişisel takip amaçlıdır; tıbbi tavsiye, teşhis ya da tedavi yerine geçmez. Kalori
